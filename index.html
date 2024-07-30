@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlighted Code Blocks</title>
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1 align="center">DOM manipulation</h1>
+    <p>Dom Manipulation Used in Loops , Condition , Function and Arrays.</p>
+
+    <h2>Selecting Elements:</h2>
+<!--------------------------------------------------------------------------->
+    <b><li>getElementById: Selects a single element by its ID.</li></b>
+    <div class="code-container">
+        <button class="copyButton">Copy Code</button>
+        <pre><code class="code-block" data-code-content="
+const element = document.getElementById('myElement');
+       "></code></pre>
+   </div>
+<!-------------------------------------------------------------------------------->
+    <b><li>getElementsByClassName: Selects all elements with a given class name</li></b>
+    <div class="code-container">
+        <button class="copyButton">Copy Code</button>
+        <pre><code class="code-block" data-code-content="
+const elements = document.getElementsByClassName('myClass');
+       "></code></pre>
+   </div>
+    <b><li>getElementsByTagName: Selects all elements with a given tag name</li></b>
+    <div class="code-container">
+        <button class="copyButton">Copy Code</button>
+        <pre><code class="code-block" data-code-content="
+const elements = document.getElementsByTagName('div');
+       "></code></pre>
+   </div>
+<b><li>querySelector: Selects the first element that matches a CSS selector.</li></b>
+    <div class="code-container">
+        <button class="copyButton">Copy Code</button>
+        <pre><code class="code-block" data-code-content="
+const element = document.querySelector('.myClass');
+       "></code></pre>
+   </div>
+       <b><li>querySelectorAll: Selects all elements that match a CSS selector</li></b>
+    <div class="code-container">
+        <button class="copyButton">Copy Code</button>
+        <pre><code class="code-block" data-code-content="
+const elements = document.querySelectorAll('.myClass');
+       "></code></pre>
+   </div>
+<hr>
+<h2>Traversing the DOM:</h2>
+<!--------------------------------------------------------------------------->
+    <b><li>Parent Node: parentNode</li></b>
+    <div class="code-container">
+        <button class="copyButton">Copy Code</button>
+        <pre><code class="code-block" data-code-content="
+const parent = element.parentNode;
+       "></code></pre>
+   </div>
+<!-------------------------------------------------------------------------------->
+    <b><li>Child Nodes: childNodes</li></b>
+    <div class="code-container">
+        <button class="copyButton">Copy Code</button>
+        <pre><code class="code-block" data-code-content="
+const children = element.childNodes;
+       "></code></pre>
+   </div>
+    <b><li>First Child: firstChild</li></b>
+    <div class="code-container">
+        <button class="copyButton">Copy Code</button>
+        <pre><code class="code-block" data-code-content="
+const firstChild = element.firstChild;
+       "></code></pre>
+   </div>
+<b><li>Last Child: lastChild</li></b>
+    <div class="code-container">
+        <button class="copyButton">Copy Code</button>
+        <pre><code class="code-block" data-code-content="
+const lastChild = element.lastChild;
+       "></code></pre>
+   </div>
+       <b><li>Next Sibling: nextSibling</li></b>
+    <div class="code-container">
+        <button class="copyButton">Copy Code</button>
+        <pre><code class="code-block" data-code-content="
+const nextSibling = element.nextSibling;
+       "></code></pre>
+   </div>
+
+   <b><li>Previous Sibling: previousSibling</li></b>
+    <div class="code-container">
+        <button class="copyButton">Copy Code</button>
+        <pre><code class="code-block" data-code-content="
+const previousSibling = element.previousSibling;
+       "></code></pre>
+   </div>
+<hr>
+<h2>Manipulating the DOM</h2>
+<b><li>Create Element: createElement</li></b>
+    <div class="code-container">
+        <button class="copyButton">Copy Code</button>
+        <pre><code class="code-block" data-code-content="
+const newElement = document.createElement('div');
+       "></code></pre>
+   </div>
+
+   <b><li>Append Child: appendChild</li></b>
+    <div class="code-container">
+        <button class="copyButton">Copy Code</button>
+        <pre><code class="code-block" data-code-content="
+parentElement.appendChild(newElement);
+       "></code></pre>
+   </div>
+
+   <b><li>Remove Child: removeChild</li></b>
+    <div class="code-container">
+        <button class="copyButton">Copy Code</button>
+        <pre><code class="code-block" data-code-content="
+parentElement.removeChild(childElement);
+       "></code></pre>
+   </div>
+
+   <b><li>Set Attribute: setAttribute</li></b>
+    <div class="code-container">
+        <button class="copyButton">Copy Code</button>
+        <pre><code class="code-block" data-code-content="
+element.setAttribute('id', 'newId');
+       "></code></pre>
+   </div>
+
+   <b><li>Get Attribute: getAttribute</li></b>
+    <div class="code-container">
+        <button class="copyButton">Copy Code</button>
+        <pre><code class="code-block" data-code-content="
+const id = element.getAttribute('id');
+       "></code></pre>
+   </div>
+
+   <b><li>Inner HTML: innerHTML</li></b>
+    <div class="code-container">
+        <button class="copyButton">Copy Code</button>
+        <pre><code class="code-block" data-code-content="
+element.innerHTML = '<p>New content</p>';
+       "></code></pre>
+   </div>
+
+
+   <b><li>Text Content: textContent</li></b>
+    <div class="code-container">
+        <button class="copyButton">Copy Code</button>
+        <pre><code class="code-block" data-code-content="
+element.textContent = 'New text content';
+       "></code></pre>
+   </div>
+
+   <hr>
+   <h2>Browser Events</h2>
+   <b><li>addEventListener: Attaches an event handler to an element</li></b>
+    <div class="code-container">
+        <button class="copyButton">Copy Code</button>
+        <pre><code class="code-block" data-code-content="
+element.addEventListener('click', function() {
+  console.log('Element clicked');
+});"></code></pre>
+   </div>
+
+<b><li>Event Object:</li></b>
+    <div class="code-container">
+        <button class="copyButton">Copy Code</button>
+        <pre><code class="code-block" data-code-content="
+element.addEventListener('click', function(event) {
+  console.log(event.type); // 'click'
+  console.log(event.target); // Element that triggered the event
+});
+    "></code></pre>
+   </div>
+
+   <b><li>Event Delegation:</li></b>
+    <div class="code-container">
+        <button class="copyButton">Copy Code</button>
+        <pre><code class="code-block" data-code-content="
+document.getElementById('parentElement').addEventListener('click', function(event) {
+  if (event.target && event.target.matches('button.myButtonClass')) {
+    console.log('Button with class 'myButtonClass' clicked');
+  }
+});"></code></pre>
+   </div>
+
+   <b><li>Removing Event Listeners:</li></b>
+    <div class="code-container">
+        <button class="copyButton">Copy Code</button>
+        <pre><code class="code-block" data-code-content="
+            function handleClick() {
+  console.log('Element clicked');
+}
+element.addEventListener('click', handleClick);
+element.removeEventListener('click', handleClick);
+       "></code></pre>
+   </div>
+
+   <b><li>Example: Adding and Removing Elements</li></b>
+
+<b>HTML:</b>
+    <div class="code-container">
+        <button class="copyButton">Copy Code</button>
+        <pre><code class="code-block" data-code-content='
+<div id="container">
+    <p>Existing Paragraph</p>
+  </div>
+  <button id="addBtn">Add Element</button>
+  <button id="removeBtn">Remove Element</button>
+       '></code></pre>
+   </div>
+
+   <b>Javascript:</b>
+    <div class="code-container">
+        <button class="copyButton">Copy Code</button>
+        <pre><code class="code-block" data-code-content="
+const container = document.getElementById('container');
+    const addBtn = document.getElementById('addBtn');
+    const removeBtn = document.getElementById('removeBtn');
+
+    addBtn.addEventListener('click', function() {
+      const newElement = document.createElement('p');
+      newElement.textContent = 'New Paragraph';
+      container.appendChild(newElement);
+    });
+
+    removeBtn.addEventListener('click', function() {
+      if (container.lastChild) {
+        container.removeChild(container.lastChild);
+      }
+    });
+       "></code></pre>
+   </div>
+
+<b><li>Example:Event Delegation</li></b>
+<b>HTML:</b>
+    <div class="code-container">
+        <button class="copyButton">Copy Code</button>
+        <pre><code class="code-block" data-code-content='
+<ul id="parentList">
+    <li><button class="childButton">Button 1</button></li>
+    <li><button class="childButton">Button 2</button></li>
+    <li><button class="childButton">Button 3</button></li>
+  </ul>
+       '></code></pre>
+   </div>
+
+
+   <b>JavaScript:</b>
+    <div class="code-container">
+        <button class="copyButton">Copy Code</button>
+        <pre><code class="code-block" data-code-content="
+document.getElementById('parentList').addEventListener('click', function(event) {
+      if (event.target && event.target.matches('button.childButton')) {
+        alert('Button clicked: ' + event.target.textContent);
+      }
+    });
+       "></code></pre>
+   </div>
+</body>
+</html>

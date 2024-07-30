@@ -1,0 +1,63 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 0;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        .code-container {
+            background-color: #000;
+            padding: 20px;
+            border-radius: 5px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .code-container button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            border: none;
+            background-color: #ff9800;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .code-container button:hover {
+            background-color: #e68a00;
+        }
+
+        .code-block {
+            color: #f8f8f2;
+            white-space: pre-wrap; /* Allows the code to wrap */
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .code-block .tag {
+            color: #ff79c6; /* Pink */
+        }
+
+        .code-block .attribute-name {
+            color: #50fa7b; /* Green */
+        }
+
+        .code-block .attribute-value {
+            color: #bd93f9; /* Purple */
+        }
+
+        .code-block .comment {
+            color: #6272a4; /* Comment color */
+        }
+
+        .code-block .element-name, 
+        .code-block .id-name, 
+        .code-block .class-name {
+            color: #3498db; /* Blue */
+        }
